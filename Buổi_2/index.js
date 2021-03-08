@@ -11,6 +11,7 @@ console.log(myArray[1]);
 console.log(myArray.length);
 
 //Update
+console.log('update array');
 myArray[0] = 2
 myArray[1] = 4
 myArray[2] = 6
@@ -20,25 +21,29 @@ console.log(myArray);
 
 //Delete
 //Xóa phần tử cuối
+console.log('delete last element');
 myArray.pop();
 console.log(myArray);
 
 //Xóa phần tử đầu
+console.log('delete first element');
 myArray.shift();
 console.log(myArray);
 
 //Xóa phần tử giữa mảng
-console.log('xóa phần tử ở giữa bằng slice')
+console.log('xóa phần tử ở giữa bằng slice');
 myArray.splice(1, 1);
 console.log(myArray);
 
 //Add
 //Add vào cuối
+console.log('add last element');
 myArray.push(12);
 myArray.push(14);
 console.log(myArray);
 
 // ADD vào đầu
+console.log('add first element');
 myArray.unshift(100)
 console.log(myArray);
 

@@ -128,6 +128,14 @@
 //     }
 // }
 
+let usserNumber = 7;
+let half = Math.floor(7 / 2)
+for (let i = 0; i < half; i++) {
+    console.log("H");
+}
+for (let i = 0; i < half; i++) {
+    console.log("L");
+}
 
 // for (let i = 0; i < 8; i++) {
 //     if (i % 2 == 0) {
@@ -148,19 +156,19 @@
 // }
 
 //Calculate BMI
-let mass = prompt('Your weight in kg?');
-let height = prompt('Your height in cm');
+// let mass = prompt('Your weight in kg?');
+// let height = prompt('Your height in cm');
 
-let BMI = mass / ((height/100)**2);
-console.log(BMI);
-alert(`Your BMI is ${BMI}`);
+// let BMI = mass / ((height/100)**2);
+// console.log(BMI);
+// alert(`Your BMI is ${BMI}`);
 
-if (BMI < 16) {
-    alert('You are severely underweight')
-} else if (BMI < 18.5) {
-    alert ('You are underweight')
-} else if (BMI < 25) {
-    alert ('You are normal')
-} else {
-    alert ('You are obese')
-}
+// if (BMI < 16) {
+//     alert('You are severely underweight')
+// } else if (BMI < 18.5) {
+//     alert ('You are underweight')
+// } else if (BMI < 25) {
+//     alert ('You are normal')
+// } else {
+//     alert ('You are obese')
+// }

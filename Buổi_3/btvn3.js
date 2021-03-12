@@ -982,11 +982,44 @@ const jobSearch = {
 }
 
 console.log(typeof(jobSearch));
+console.log(jobSearch);
 
-console.log(jobSearch.hits);
+//3.2 Find Job's title, locations, salary, benefits, skills & requirements
+let hitArray = jobSearch.hits;
+console.log(hitArray);
 
+//Find Title
+let foundTitle = hitArray.map(function(item) {
+    return item.jobTitle
+})
+console.log(foundTitle);
 
-//4.
+//Find Location
+let foundLocation = hitArray.map(function (item) {
+    return item.locations
+})
+console.log(foundLocation);
+
+//Find Salary
+let foundSalary = hitArray.map(function (item) {
+    return item.jobSalary
+})
+console.log(foundSalary);
+
+//Find benefits
+let benefitArray = hitArray[0].benefits;
+let foundBenefits = benefitArray.map(function (item) {
+    return item.benefitValue
+})
+console.log(foundBenefits);
+// 
+//Find Skills
+let foundSkill = hitArray.map(function (item) {
+    return item.skills
+})
+// console.log(foundSkill);
+
+4.
 let myDict = {
     debug: "The process of figuring out why your program has a certain error and how to fix it",
     done: "When your task is complete, the only thing you have to do is to wait for users to use it (no additional codes or actions needed)",
@@ -997,17 +1030,19 @@ let myDict = {
 
 console.log(myDict);
 
-// alert("Hi there, this is dev dictionary");
 
-// let traCuu = prompt("Enter a keyword");
+// 4.2 Find KW in Dictionary
+alert("Hi there, this is dev dictionary");
+let traCuu = prompt("Enter a keyword");
+if (typeof myDict[traCuu] === "undefined") {
+    alert (`We could not find your word: "${traCuu}"`)
+} else {
+    alert(myDict[traCuu]);
+}
 
-// if (typeof myDict[traCuu] === "undefined") {
-//     alert (`We could not find your word: "${traCuu}"`)
-// } else {
-//     alert(myDict[traCuu]);
-// }
 
 
+// 4.3 Let user add new KW into Dictionary
 let tuKhoa = prompt("Enter a keyword");
 
 if (typeof myDict[tuKhoa] === "undefined") {
@@ -1019,3 +1054,46 @@ if (typeof myDict[tuKhoa] === "undefined") {
 }
 
 console.log(myDict);
+
+
+
+//5. create array products, with product objects
+let products = [
+    product = {
+        Name: "Xiaomi protable charger 20000mah",
+        Brand: "Xiaomi",
+        Price: "428",
+        Color: "White",
+        Category: "Charger",
+    },
+    {
+        Name: "VSmart Active 1",
+        Brand: "VSmart",
+        Price: "5487",
+        Color: "Black",
+        Category: "Phone",
+    },
+    {
+        Name: "IPhone X",
+        Brand: "Apple",
+        Price: "21490",
+        Color: "Gray",
+        Category: "Phone",
+    },
+    {
+        Name: "Samsung Galaxy A9",
+        Brand: "Samsung",
+        Price: "8490",
+        Color: "Blue",
+        Category: "Phone",
+    }
+]
+
+console.log(products);
+
+//Log Name & Price
+products.forEach(function (product) {
+    console.log("Name: "+ product.Name);
+    console.log("Price: " + product.Price);
+}
+)

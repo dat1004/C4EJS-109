@@ -1,0 +1,32 @@
+div {
+  background-color: brown;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+#div1 {
+  background-color: brown;
+}
+
+#div2 {
+  background-color: blue;
+}
+
+#div3 {
+  background-color: green;
+}
+
+.special {
+  margin-left: 200px;
+}
+
+.redText {
+  color: red;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}

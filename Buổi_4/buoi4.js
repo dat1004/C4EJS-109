@@ -259,7 +259,7 @@ for (let i = 0; i < library.length; i++) {
 }
 
 
-//display the time every sec
+//a clock display the time every sec
 function myClock() {
     this.currentDate = new Date();
     this.hours = this.currentDate.getMinutes();
@@ -267,4 +267,17 @@ function myClock() {
 }
 myClock.prototype.run = function () {
     setInterval(this.update.bind(this), 1000);
+};
+myClock.prototype.update = function () {
+    this.updateTime(1);
+    console.log(`this.hours + ":" this.minutes + ":" this.seconds`)
+};
+myClock.prototype.updateTime = function (secs) {
+    this.seconds += secs;
+    if (this.seconds >= 60) {
+        this.minutes++;
+        this.seconds = 0;
+    }
 }
+let clock = new myClock();
+clock.run();

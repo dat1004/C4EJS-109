@@ -91,7 +91,6 @@ h2 {
   margin: 0px 8px;
 }
 
-
 .follow-btn {
   padding-top: 60px;
   text-align: center;
@@ -104,9 +103,9 @@ h2 {
   padding: 10px 50px;
   margin: auto;
   border-radius: 4px;
-
+  text-decoration: none;
 }
 
 .follow-btn a:hover {
-	background:#3B3A3A;
+  background: #3b3a3a;
 }

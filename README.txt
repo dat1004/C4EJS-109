@@ -18,3 +18,10 @@ https://www.w3schools.com/
 
 //MDN Web Docs
 https://developer.mozilla.org/en-US/docs/Web
+
+//pro icon
+<link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+https://icons8.com/
+
+
+

@@ -1,3 +1,5 @@
+<!-- get the value of the href, hreflang, rel, target, and type attributes -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,5 +20,18 @@
     <button onclick="getAttributes()">
       Click here to get attributes value
     </button>
+
+    <script>
+      let valueCollect = document.getElementById("w3r");
+      console.dir(valueCollect);
+
+      function getAttributes() {
+        alert(valueCollect.href);
+        alert(valueCollect.hreflang);
+        alert(valueCollect.rel);
+        alert(valueCollect.target);
+        alert(valueCollect.type);
+      }
+    </script>
   </body>
 </html>

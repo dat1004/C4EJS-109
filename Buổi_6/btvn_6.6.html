@@ -1,0 +1,46 @@
+<!-- Remove/add item to list -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Remove items from a dropdown list</title>
+  </head>
+  <body>
+    <form>
+      <select id="colorSelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+      </select>
+      <input type="button" onclick="removecolor()" value="Select and Remove" />
+      <br />
+      <br />
+      <input type="text" id="textField" />
+      <input type="button" onclick="addcolor()" value="Select and Add" />
+    </form>
+
+    <script>
+      let colorList = document.getElementById("colorSelect");
+      console.dir(colorList);
+
+      function removecolor() {
+        colorList.remove(colorList.selectedIndex);
+      }
+
+      function addcolor() {
+        let newColor = document.getElementById("textField").value;
+        let newOption = document.createElement("option");
+        newOption.text = newColor;
+        colorList.add(newOption);
+      }
+
+      // function addcolor() { // Nam's solution
+      //   const newColor = document.querySelector("#textField").value;
+      //   document.querySelector("#colorSelect").innerHTML +=
+      //     "<option>" + newColor + "</option>";
+      // }
+    </script>
+  </body>
+</html>

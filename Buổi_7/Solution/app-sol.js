@@ -20,6 +20,19 @@ let cafes = [
     city: "Hà Nội",
   },
 ];
+
+localStorage.setItem("cafes", JSON.stringify(cafes));
+
+function getData() {
+  cafes = JSON.parse(localStorage.getItem("cafeData"));
+  if (!cafes) {
+    return [];
+  } else {
+    return cafes;
+  }
+}
+let data = getData();
+
 let index = -1;
 function renderItem(doc) {
   let myForm = document.getElementById("cafe-list");
@@ -59,5 +72,3 @@ inputForm.addEventListener("submit", (event) => {
   inputForm.city.value = "";
   inputForm.name.value = "";
 });
-
-

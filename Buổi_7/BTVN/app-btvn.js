@@ -1,79 +1,3 @@
-// let cafes = [
-//   {
-//     name: "Cafe Cyber",
-//     city: "Night City",
-//   },
-//   {
-//     name: "Cafe Haha",
-//     city: "Day City",
-//   },
-//   {
-//     name: "Cafe Very Nice",
-//     city: "Very nice City",
-//   },
-//   {
-//     name: "Starbuck",
-//     city: "Hanoi",
-//   },
-//   {
-//     name: "Highland",
-//     city: "Vung Tau",
-//   },
-// ];
-
-// function renderItem(doc) {
-//   let myForm = document.getElementById("cafe-list");
-//   let li = document.createElement("li");
-//   let name = document.createElement("span");
-//   let city = document.createElement("span");
-//   let cross = document.createElement("div");
-
-//   name.textContent = doc.name;
-//   city.textContent = doc.city;
-//   cross.textContent = "x";
-
-//   li.appendChild(name);
-//   li.appendChild(city);
-//   li.appendChild(cross);
-//   myForm.appendChild(li);
-//   console.log(li);
-
-//   cross.addEventListener("click", () => {
-//     myForm.removeChild(li);
-//     cafes = cafes.filter((item) => item !== doc);
-//     console.log(cafes);
-
-//     // let itemIndex = cafes.indexOf(doc);
-//     // cafes.splice(itemIndex, 1);
-//     //   console.log(cafes);
-//   });
-// }
-
-// // cafes.forEach(doc => renderItem(doc)); //Pro method
-
-// for (let i = 0; i < cafes.length; i++) {
-//   renderItem(cafes[i]);
-// }
-
-// let inputForm = document.getElementById("add-cafe-form");
-// inputForm.addEventListener("submit", (event) => {
-//   event.preventDefault(); //Prevent (event) = Reloading Webpage
-//   let inputName = inputForm.name.value;
-//   let inputCity = inputForm.city.value;
-//   let myObj = {
-//     name: inputName,
-//     city: inputCity,
-//   };
-//   cafes.push(myObj); //push input into a new Object
-//   renderItem(myObj);
-
-//   inputForm.name.value = "";
-//   inputForm.city.value = ""; //Clear input value after adding cafe
-// });
-
-// localStorage.setItem("myKey", "myValue");
-// console.log(localStorage.getItem("myKey"));
-
 //Cafe Class: Represent Cafe
 class Cafe {
   constructor(name, city) {
@@ -85,29 +9,29 @@ class Cafe {
 //UI Class: Handle UI Task
 class UI {
   static displayCafes() {
-    let StoredCafes = [
-      {
-        name: "Cafe Cyber",
-        city: "Night City",
-      },
-      {
-        name: "Cafe Haha",
-        city: "Day City",
-      },
-      {
-        name: "Cafe Very Nice",
-        city: "Very nice City",
-      },
-      {
-        name: "Starbuck",
-        city: "Hanoi",
-      },
-      {
-        name: "Highland",
-        city: "Vung Tau",
-      },
-    ];
-    const cafes = StoredCafes;
+    // let StoredCafes = [
+    //   {
+    //     name: "Cafe Cyber",
+    //     city: "Night City",
+    //   },
+    //   {
+    //     name: "Cafe Haha",
+    //     city: "Day City",
+    //   },
+    //   {
+    //     name: "Cafe Very Nice",
+    //     city: "Very nice City",
+    //   },
+    //   {
+    //     name: "Starbuck",
+    //     city: "Hanoi",
+    //   },
+    //   {
+    //     name: "Highland",
+    //     city: "Vung Tau",
+    //   },
+    // ];
+    const cafes = Store.getCafes();
 
     cafes.forEach((cafe) => UI.addCafeToList(cafe));
   }
@@ -144,7 +68,6 @@ class Store {
     } else {
       cafes = JSON.parse(localStorage.getItem("cafes"));
     }
-
     return cafes;
   }
 
@@ -156,7 +79,7 @@ class Store {
 
   static removeCafe() {
     const cafes = Store.getCafes();
-    cafes.splice(index, 1);
+    cafes.pop();
     localStorage.setItem("cafes", JSON.stringify(cafes));
   }
 }
@@ -179,11 +102,18 @@ document.querySelector("#add-cafe-form").addEventListener("submit", (e) => {
   //add cafe to UI
   UI.addCafeToList(cafe);
 
+  //add cafe to localstorage
+  Store.addCafe(cafe);
+
   //clear field
   UI.clearField();
 });
 
 //Event: Remove a cafe
 document.querySelector("#cafe-list").addEventListener("click", (e) => {
+  //Remove cafe in UI
   UI.deleteCafe(e.target);
+
+  //Remove cafe in storage
+  Store.removeCafe(e.target);
 });

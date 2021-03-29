@@ -22,7 +22,7 @@ $ git commit
 $ git commit -m '<comment>'
 
 //Add repository as a remote repository
-$ git remote add origion <https://github.com/dat1004/${myrepo.git}>
+$ git remote add origin <https://github.com/dat1004/${myrepo.git}>
 $ git push -u origin master
 
 //Push to Remote Repository

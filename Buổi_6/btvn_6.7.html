@@ -1,0 +1,91 @@
+<!-- Display random photo -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display random photo</title>
+  </head>
+  <body>
+    <img
+      id="img"
+      src="http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg"
+      width="240"
+      height="160"
+    />
+    <br />
+
+    <input
+      type="button"
+      id="randImg"
+      onclick="generate_randImg()"
+      value="Generate Random Image"
+    />
+
+    <script>
+      let dImgArr = [
+        {
+          src:
+            "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+          width: "240",
+          height: "160",
+        },
+        {
+          src: "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+          width: "320",
+          height: "195",
+        },
+        {
+          src: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+          width: "500",
+          height: "343",
+        },
+      ];
+      console.dir(document.getElementById("img"));
+      console.dir(dImgArr);
+
+      function generate_randImg() {
+        let randNum = Math.floor(Math.random() * dImgArr.length);
+        let newImg = document.getElementById("img");
+        newImg.src = dImgArr[randNum].src;
+        newImg.width = dImgArr[randNum].width;
+        newImg.height = dImgArr[randNum].height;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- Different Method: -->
+
+<script>
+  let obj1 = {
+    src: "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+    width: "240",
+    height: "160",
+  };
+
+  let obj2 = {
+    src: "hhttp://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+    width: "320",
+    height: "195",
+  };
+
+  let obj3 = {
+    src: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+    width: "500",
+    height: "343",
+  };
+
+  let myOption = [obj1, obj2, obj3];
+  let btnRand = document.getElementById("btnRand");
+  btnRand,
+    addEventListener("click", () => {
+      let myRandInd = Math.floor(Math.random() * myOption.length);
+      let myImg = document.getElementById("myImg");
+      myImg.src = myOption[myRandInd].src;
+      myImg.width = myOption[myRandInd].width;
+      myImg.height = myOption[myRandInd].height;
+    });
+</script>

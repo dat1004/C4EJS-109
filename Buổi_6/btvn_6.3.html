@@ -1,0 +1,32 @@
+<!-- set the background color of a paragraph -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set the background color of a paragraph</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio dolorum
+      recusandae dignissimos architecto nulla, suscipit fuga consequatur eius,
+      quas ipsam non facere odio labore ipsa. Labore ea esse hic nostrum?
+    </p>
+    <input
+      type="button"
+      value="Change Background"
+      onclick="change_backgroud()"
+    />
+    <script>
+      let colorPara = document.getElementsByTagName("p");
+      console.dir(colorPara);
+
+      function change_backgroud() {
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        colorPara[0].style.backgroundColor = "#" + randomColor;
+      }
+    </script>
+  </body>
+</html>

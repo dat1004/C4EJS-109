@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chua_BTVN_5</title>
+    <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="ChuaBTVN_5.css">
+    
+    <!-- Must have style* -->
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: rgb(131,58,180);
+        background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    }
+
+    .container {
+        width: 500px;
+        background-color: cadetblue;
+        padding: 30px 0px;
+        text-align: center;
+        background-color: whitesmoke;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #ava {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    #name {
+        color: teal;
+        margin-bottom: 20px;
+    }
+
+    #job {
+        margin: 15px 0px;
+    }
+
+    .content {
+        margin: 10px;
+    }
+
+    .contact-wrapper {
+        display: flex;
+        justify-content: space-around;
+        background-color:rgb(219, 219, 219);
+        padding: 15px 0px;
+    }
+
+    .contact-wrapper p {
+        margin-top: 10px;
+    }
+
+    .job {
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .email, .job, .user {
+        width: calc(100%/3);
+    }
+
+button {
+    background-color: teal;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    color: whitesmoke
+}
+
+button :hover {
+    background-position: right;
+    transition: 0.5s;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img id="ava" src="https://picsum.photos/300/300" alt="random-pic">
+        <h1 id="name">Hand Cock</h1>
+        <p id="job">Super Hero</p>
+        <hr>
+
+        <div class="content">
+            <h1>Active Level: 85%</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio aspernatur nisi consequuntur corrupti suscipit perspiciatis nostrum facilis eligendi rerum praesentium nihil dolor unde amet, maxime culpa mollitia pariatur officia. Iusto.</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="email"><i class="fal fa-envelope-open"></i>
+                <p>1234</p>
+            </div>
+            <div class="job"><i class="fal fa-suitcase"></i></i>
+                <p>6983</p>
+            </div>
+            <div class="user"><i class="far fa-users"></i>
+                <p>4568</p>
+            </div>
+        </div>
+
+        <div class="social-media">
+            <img src="https://img.icons8.com/plasticine/100/000000/facebook-new.png" />
+            <img src="https://img.icons8.com/plasticine/100/000000/twitter--v2.png" />
+            <img src="https://img.icons8.com/plasticine/100/000000/instagram-new.png" />
+            <img src="https://img.icons8.com/plasticine/100/000000/youtube-squared.png" />
+        </div>
+
+        <button>Follow</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!-- add rows to a table -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Insert row in a table - w3resource</title>
+  </head>
+  <body>
+    <table id="sampleTable" border="1">
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+      </tr>
+    </table>
+    <br />
+    <input type="button" onclick="insert_Row()" value="Insert row" />
+
+    <script>
+      let dTable = document.getElementById("sampleTable");
+      console.dir(dTable);
+
+      function insert_Row() {
+        let newRow = document.createElement("tr");
+        let newTd1 = document.createElement("td");
+        let newTd2 = document.createElement("td");
+        let newText1 = document.createTextNode("New Row cell1");
+        let newText2 = document.createTextNode("New Row cell2");
+        newTd1.appendChild(newText1);
+        newTd2.appendChild(newText2);
+        newRow.append(newTd1, newTd2);
+        return dTable.appendChild(newRow);
+      }
+    </script>
+  </body>
+</html>

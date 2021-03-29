@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chua BTVN_8</title>
+  </head>
+  <body>
+    <h1>Weather Forcast</h1>
+    <h2>Enter Location</h2>
+    <form id="myForm">
+      <input name="city" type="text" />
+      <button type="submit">Search</button>
+    </form>
+    <p>Thanh pho:<span id="city"></span></p>
+    <p>Nhiet do:<span id="temp"></span></p>
+    <p>Do am:<span id="humid"></span></p>
+    <script>
+      //Async await functon to fetch data from API
+      async function getData(cityName) {
+        let myData = await fetch(
+          `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=8311600ccf19bd44bfc8bf3be3b70f68`
+        );
+        //crawl data out & put in the form
+        myData = await myData.json();
+        let respondCity = myData.name;
+        let respondTemp = myData.main.temp;
+        let respondHumidity = myData.main.humidity;
+        console.log(myData);
+        document.getElementById("city").innerHTML = respondCity;
+        document.getElementById("temp").innerHTML = respondTemp;
+        document.getElementById("humid").innerHTML = respondHumidity;
+      }
+      getData();
+
+      //add event listener to input.value and print out
+      let theForm = document
+        .getElementById("myForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          console.log(myForm.city.value);
+          getData(myForm.city.value);
+        });
+    </script>
+  </body>
+</html>

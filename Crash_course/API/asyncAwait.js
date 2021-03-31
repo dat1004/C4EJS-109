@@ -31,6 +31,13 @@ function processRequest(response) {
 //     console.log(err);
 //   });
 
+//Async Await syntax
+async function getUsers() {
+  const response = await fetch("https://reqres.in/api/users");
+
+  console.log(await response.json());
+}
+
 //AsyncAwaut method -> have it wrap into a function
 async function doWork() {
   try {

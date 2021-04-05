@@ -11,9 +11,8 @@
 4. <https://javascript.info/>
 5. <https://262.ecma-international.org/11.0/>
 6. <https://www.w3schools.com/>
-7. <https://www.w3schools.com/>
-8. <https://developer.mozilla.org/en-US/docs/Web>
-9. <https://github.com/edtechkidsvn/c4ejs-student-book?fbclid=IwAR3rT7hPeYsVbWRP-nbK4951eoWVVhjMlHrrGmVWTD0VyOnjxMY8m6iUCAQ>
+7. <https://developer.mozilla.org/en-US/docs/Web>
+8. <https://github.com/edtechkidsvn/c4ejs-student-book?fbclid=IwAR3rT7hPeYsVbWRP-nbK4951eoWVVhjMlHrrGmVWTD0VyOnjxMY8m6iUCAQ>
 
 # images/logo
 

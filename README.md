@@ -17,16 +17,17 @@
 # images/logo
 
 1. <https://getbootstrap.com/>
-2. <https://fontawesome.com/><link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
-3. <https://icons8.com/>
-4. <https://unsplash.com/>
-5. <https://www.pexels.com/>
-6. <https://undraw.co/illustrations>
-7. <https://coverr.co/>
-8. <https://www.flaticon.com/>
-9. <https://fonts.google.com/>
-10. <https://michalsnik.github.io/aos/>
-11. <https://animate.style/>
+2. <https://cdnjs.com/>
+3. <https://fontawesome.com/><link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+4. <https://icons8.com/>
+5. <https://unsplash.com/>
+6. <https://www.pexels.com/>
+7. <https://undraw.co/illustrations>
+8. <https://coverr.co/>
+9. <https://www.flaticon.com/>
+10. <https://fonts.google.com/>
+11. <https://michalsnik.github.io/aos/>
+12. <https://animate.style/>
 
 # design idea
 

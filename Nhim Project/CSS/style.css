@@ -42,7 +42,6 @@ section.home {
   margin-top: 0;
 }
 
-
 /* BUTTON */
 .btn {
   cursor: pointer;
@@ -245,7 +244,6 @@ section.home {
 }
 
 /* CONTACTPAGE */
-
 .contact {
   position: relative;
   width: 100%;
@@ -329,12 +327,12 @@ section.home {
 }
 
 .contact-info .info-box .details h4 {
-  color:var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .contact-info .info-box .details p,
 .contact-info .info-box .details a {
-  color:black;
+  color: black;
 }
 
 @media (max-width: 1068px) {

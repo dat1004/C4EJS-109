@@ -54,3 +54,6 @@
 # Paste of Code
 
 <https://paste.ofcode.org/s6USSsghYcBsFA6XXYAZN7?fbclid=IwAR1FEy46Dj1DBAE43hg4qGY6iGgeZ1O0n7tnyWnGgtgGMFt7DQ4Ovzr0UD8>
+
+# Transpiler
+<https://babeljs.io/>

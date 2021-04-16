@@ -3,8 +3,12 @@
     {
       "sys": { "id": "1" },
       "fields": {
+        "brand": "Nike",
         "title": "Nike Air Force 1 Low Off-White Black White",
         "price": "17,900,000",
+        "style": "A04606 - 001",
+        "color": "Black White",
+        "date": "19 / 12 / 2018",
         "image": {
           "fields": {
             "file": {
@@ -17,8 +21,12 @@
     {
       "sys": { "id": "2" },
       "fields": {
+        "brand": "Nike",
         "title": "Nike Air Force 1 Low G-Dragon Peaceminusone",
         "price": "15,800,000",
+        "style": "DD3223 - 100",
+        "color": "Black White",
+        "date": "25 / 11 / 2020",
         "image": {
           "fields": {
             "file": {
@@ -31,8 +39,12 @@
     {
       "sys": { "id": "3" },
       "fields": {
+        "brand": "Nike",
         "title": "Nike Air Max 90 Off-White Black",
         "price": "16,400,000",
+        "style": "AA7293 - 001",
+        "color": "Black White",
+        "date": "07 / 02 / 2019",
         "image": {
           "fields": {
             "file": {
@@ -45,8 +57,12 @@
     {
       "sys": { "id": "4" },
       "fields": {
+        "brand": "Adidas",
         "title": "SNS x adidas NMD R1 Datamosh Clear Aqua",
         "price": "2,800,000",
+        "style": "BB6364",
+        "color": "Clear Aqua",
+        "date": "12 / 05 / 2017",
         "image": {
           "fields": {
             "file": {
@@ -59,8 +75,12 @@
     {
       "sys": { "id": "5" },
       "fields": {
+        "brand": "Nike",
         "title": "Air Jordan 1 Low White Camo",
         "price": "6,400,000",
+        "style": "DC9036 100",
+        "color": "White Camo",
+        "date": "2020",
         "image": {
           "fields": {
             "file": {
@@ -73,8 +93,12 @@
     {
       "sys": { "id": "6" },
       "fields": {
+        "brand": "Nike",
         "title": "Air Jordan High COJP Midnight Navy",
         "price": "8,500,000",
+        "style": "DC1788 100",
+        "color": "Midnight Navy",
+        "date": "14 / 11 / 2020",
         "image": {
           "fields": {
             "file": {
@@ -87,8 +111,12 @@
     {
       "sys": { "id": "7" },
       "fields": {
+        "brand": "Nike",
         "title": "Nike Dunk Low Off-White Universirt Gold Midnight",
         "price": "15,800,000",
+        "style": "CT0856-700",
+        "color": "Gold Midnight",
+        "date": "20 / 12 / 2019",
         "image": {
           "fields": {
             "file": {
@@ -101,8 +129,12 @@
     {
       "sys": { "id": "8" },
       "fields": {
+        "brand": "Converse",
         "title": "Converse Chuck Taylor All-Star 70s Ox CDG Play White",
         "price": "4,700,000",
+        "style": "150207C",
+        "color": "White",
+        "date": "09 / 07 / 2019",
         "image": {
           "fields": {
             "file": {
@@ -115,8 +147,12 @@
     {
       "sys": { "id": "9" },
       "fields": {
+        "brand": "Adidas",
         "title": "Adidas NMD R1 Friends & Family Pitch Black",
         "price": "29,000,000",
+        "style": "S80489",
+        "color": "Black",
+        "date": "30 / 07 / 2016",
         "image": {
           "fields": {
             "file": {
@@ -129,8 +165,12 @@
     {
       "sys": { "id": "10" },
       "fields": {
+        "brand": "Nike",
         "title": "Nike x Off-White Presto White",
         "price": "16,500,000",
+        "style": "S80489",
+        "color": "White",
+        "date": "30 / 07 / 2019",
         "image": {
           "fields": {
             "file": {
@@ -143,8 +183,12 @@
     {
       "sys": { "id": "11" },
       "fields": {
+        "brand": "Vans",
         "title": "Vans Slip-On Ralph Steadman Fish",
         "price": "3,000,000",
+        "style": "VN0A45JKVQM",
+        "color": "White",
+        "date": "03 / 08 / 2018",
         "image": {
           "fields": {
             "file": {
@@ -157,8 +201,12 @@
     {
       "sys": { "id": "12" },
       "fields": {
+        "brand": "Nike",
         "title": "Air Jordan 6 Retro Olive Travis Scott",
         "price": "19,500,000",
+        "style": "CN1084-200",
+        "color": "Olive White",
+        "date": "11 / 04 / 2019",
         "image": {
           "fields": {
             "file": {
@@ -171,8 +219,12 @@
     {
       "sys": { "id": "13" },
       "fields": {
+        "brand": "Adidas",
         "title": "Packer Shoes x Solebox x adidas Ultra Boost Mid Silfra Rift",
         "price": "3,400,000",
+        "style": "CM7882",
+        "color": "Midnight Black Blue",
+        "date": "11 / 04 / 2019",
         "image": {
           "fields": {
             "file": {
@@ -185,8 +237,12 @@
     {
       "sys": { "id": "14" },
       "fields": {
+        "brand": "Adidas",
         "title": "Yeezy Boost 350 V2 Antlia",
         "price": "8,500,000",
+        "style": "FV3250",
+        "color": "Vanilla",
+        "date": "11 / 04 / 2019",
         "image": {
           "fields": {
             "file": {
@@ -199,8 +255,12 @@
     {
       "sys": { "id": "15" },
       "fields": {
+        "brand": "Adidas",
         "title": "Yeezy Boost 350 V2 Black Non-Reflective",
         "price": "11,800,000",
+        "style": "FU9006",
+        "color": "Black",
+        "date": "20 / 06 / 2019",
         "image": {
           "fields": {
             "file": {
@@ -213,8 +273,12 @@
     {
       "sys": { "id": "16" },
       "fields": {
+        "brand": "Vans",
         "title": "Vans Authentic Van Gogh Self Portrait",
         "price": "3,300,000",
+        "style": "VA38EMU5X",
+        "color": "Van Gogh",
+        "date": "20 / 09 / 2018",
         "image": {
           "fields": {
             "file": {

@@ -40,7 +40,8 @@ const cartOverlay = document.querySelector(".cart-overlay");
 const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
-const productDOM = document.querySelector(".product-detail");
+const productsDOM = document.querySelector(".porfolio");
+const productDetail = document.querySelector(".container-product");
 
 //Cart
 let cart = [];
@@ -53,11 +54,12 @@ class Products {
       let data = await result.json();
       let products = data.items;
       products = products.map((item) => {
-        const { title, price } = item.fields;
+        const { brand, title, price, style, color, date } = item.fields;
         const { id } = item.sys;
         const image = item.fields.image.fields.file.url;
-        return { title, price, id, image };
+        return { brand, title, price, id, image, style, color, date };
       });
+      console.dir(products);
       return products;
     } catch (error) {
       console.log(error);
@@ -67,37 +69,122 @@ class Products {
 
 //UI product
 class UI {
+  //Display products in porfolio
   displayProducts(products) {
     let result = "";
     products.forEach((product) => {
       result += `
-      <div class="porfolio">
           <div class="item">
             <img
-              src="images/air_force_1_ow_aa32a4487ff5489282e70a0b28ab84eb_ba1c86f36206402faac83ba4a1ec001c_large.png"
+              src=${product.image}
               alt="porfolio-item1"
             />
             <div class="product">
-              <div class="product-brand">Nike</div>
-              <a class="product-name" href="product_01.html"
-                >Nike Air Force 1 Low Off-White Black White</a
+              <div class="product-brand">${product.brand}</div>
+              <a class="product-name" href=#
+                >${product.title}</a
               >
-              <div class="product-price">17,900,000vnd</div>
+              <div class="product-price">${product.price}vnd</div>
             </div>
+            <div class="action" data-id=${product.id}>
+              <a href="product_01.html">Shop Now</a>
+            </div>
+          </div>
       `;
     });
     productsDOM.innerHTML = result;
+  }
+
+  //Display product in product-detail
+  displayProductDetail(products) {
+    let detail = "";
+    products.forEach((product) => {
+      detail += `
+      <img
+          src=${product.image}
+          alt=""
+        />
+        <div class="product-detail">
+          <h2>${product.title}</h2>
+          <h3>${product.price}vnd</h3>
+          <br />
+          <br />
+          <ul class="product-description">
+            <h4>Description</h4>
+            <br />
+            <li>Style: ${product.style}</li>
+            <li>Color: ${product.color}</li>
+            <li>Release Date: ${product.date}</li>
+          </ul>
+          <button class="add-to-cart" data-id=${product.id} type="submit">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+        `;
+    });
+    productDetail.innerHTML = detail;
   }
 }
 
 //local Storage
 class Storage {}
 
-//event listener
+//event listener when DOM loaded
 document.addEventListener("DOMContentLoaded", () => {
   const ui = new UI();
   const products = new Products();
-
   //Ger all products
   products.getProducts().then((products) => ui.displayProducts(products));
 });
+
+// Get product detail when click on action
+// setTimeout(function () {
+//   let shopNowBtn = document.querySelectorAll("[data-id]");
+//   console.log(shopNowBtn);
+
+//   for (i = 0; i < shopNowBtn.length; i++) {
+//     shopNowBtn[i].addEventListener("click", function () {
+//       displayProductDetail(products);
+//     });
+//   }
+// }, 3000);
+
+// setTimeout(function () {
+//   let shopNowBtn = document.getElementsByClassName("action");
+//   console.log(shopNowBtn);
+
+//   for (i = 0; i < shopNowBtn.length; i++) {
+//     shopNowBtn[i].addEventListener("click", function () {
+//       const ui = new UI();
+//       const products = new Products();
+//       products
+//         .getProducts()
+//         .then((products) => ui.displayProductDetail(products));
+//     });
+//   }
+// }, 3000);
+
+setTimeout(function () {
+  let shopNowBtn = document.querySelectorAll(".action");
+  shopNowBtn.forEach((shopNowBtn) => {
+    let id = shopNowBtn.dataset.id;
+    console.log(id);
+  });
+}, 3000);
+
+function getSearchParameters() {
+  var prmstr = window.location.search.substr(1);
+  return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+}
+
+function transformToAssocArray(prmstr) {
+  var params = {};
+  var prmarr = prmstr.split("&");
+  for (var i = 0; i < prmarr.length; i++) {
+    var tmparr = prmarr[i].split("=");
+    params[tmparr[0]] = tmparr[1];
+  }
+  return params;
+}
+
+var params = getSearchParameters();
